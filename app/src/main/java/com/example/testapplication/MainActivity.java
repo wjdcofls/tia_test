@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -47,6 +48,18 @@ public class MainActivity extends AppCompatActivity {
                 tv_1.setText(getString(R.string.main_default_textView));
                 btn_1.setTextColor(Color.BLACK);
                 btn_1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.grey));
+            }
+        });
+
+        Button btn_2 = findViewById(R.id.btn2);
+
+        btn_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent intent = new Intent(MainActivity.this, edit_text.class);
+                Intent intent = new Intent(getApplicationContext(), edit_text.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

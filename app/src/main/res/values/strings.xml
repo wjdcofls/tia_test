@@ -4,4 +4,6 @@
     <string name="main_button">버튼</string>
     <string name="color_main">Color : main</string>
     <string name="color_grey">Color : grey</string>
+    <string name="change_screen">화면 전환</string>
+    <string name="edit_text_title">이용안내</string>
 </resources>

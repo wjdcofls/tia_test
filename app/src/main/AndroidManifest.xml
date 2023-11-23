@@ -23,6 +23,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".edit_text"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+
     </application>
 
 </manifest>
