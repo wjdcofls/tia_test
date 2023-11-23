@@ -2,4 +2,6 @@
     <string name="app_name">Test Application</string>
     <string name="main_default_textView">클릭 이벤트</string>
     <string name="main_button">버튼</string>
+    <string name="color_main">Color : main</string>
+    <string name="color_grey">Color : grey</string>
 </resources>
