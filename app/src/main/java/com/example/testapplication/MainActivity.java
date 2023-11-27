@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 // Intent intent = new Intent(MainActivity.this, edit_text.class);
                 Intent intent = new Intent(getApplicationContext(), edit_text.class);
                 startActivity(intent);
-                finish();
+                onPause();
             }
         });
     }

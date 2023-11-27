@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_text_lauout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     android:background="@color/basic">
 
+
+    <!--App Bar-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:gravity="center"
         android:background="@color/white">
 
         <View
@@ -24,9 +28,11 @@
             android:text="@string/edit_text_title"
             android:textColor="@color/main"
             android:textSize="18dp"
-            android:fontFamily="@font/notosans_medium_ttf"/>
+            android:fontFamily="@font/notosans_medium_ttf">
+        </TextView>
 
         <Button
+            android:id="@+id/btn3"
             android:layout_width="30dp"
             android:layout_height="46dp"
             android:background="@drawable/btn_close"
@@ -35,5 +41,239 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/layout_focusout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--Name-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/notosans_regular_ttf"
+            android:text="@string/edit_text_name"
+            android:textColor="@color/text_default_2"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:orientation="horizontal">
+
+            <!--Name EditText & Nationality Button-->
+            <EditText
+                android:id="@+id/et1"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/login_main_edittext"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:hint="@string/edit_text_hint"
+                android:paddingLeft="12dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_spinner"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="@string/edit_text_nationality"
+                android:textColor="@color/text_default_2"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+
+        <!--Birth-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/notosans_regular_ttf"
+            android:text="@string/edit_text_birth"
+            android:textColor="@color/text_default_2"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:orientation="horizontal">
+
+            <!--Birth EditText & gender Button-->
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/login_main_edittext"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:hint="@string/edit_text_birth_hint"
+                android:paddingLeft="12dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_main_edittext"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:text="@string/edit_text_woman"
+                android:textColor="@color/text_default_2"
+                android:textSize="14dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_main_edittext"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:text="@string/edit_text_man"
+                android:textColor="@color/text_default_2"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+
+        <!--Phone-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/notosans_regular_ttf"
+            android:text="@string/edit_text_phone"
+            android:textColor="@color/text_default_2"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_main_edittext"
+            android:fontFamily="@font/notosans_regular_ttf"
+            android:hint="@string/edit_text_phone_hint"
+            android:paddingLeft="12dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="12sp" />
+
+
+        <!--E-mail-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/notosans_regular_ttf"
+            android:text="@string/edit_text_email"
+            android:textColor="@color/text_default_2"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <!--Email EditText & other Button-->
+            <EditText
+                android:layout_width="235dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/login_main_edittext"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:hint="@string/edit_text_email_hint"
+                android:paddingLeft="12dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_spinner"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:gravity="center_vertical"
+                android:outlineProvider="none"
+                android:paddingLeft="12dp"
+                android:text="@string/edit_text_other"
+                android:textColor="@color/text_default_2"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <!--email EditText2 & verification_request Button-->
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/login_main_edittext"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:hint="@string/edit_text_email_hint2"
+                android:paddingLeft="12dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/login_main_edittext2"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:text="@string/edit_text_verification_request"
+                android:textColor="@color/main"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/login_main_edittext2"
+            android:fontFamily="@font/notosans_regular_ttf"
+            android:text="@string/edit_text_next"
+            android:textColor="@color/main"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 
 </LinearLayout>
