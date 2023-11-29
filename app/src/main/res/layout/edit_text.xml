@@ -35,7 +35,7 @@
             android:id="@+id/btn3"
             android:layout_width="30dp"
             android:layout_height="46dp"
-            android:background="@drawable/btn_close"
+            android:background="@drawable/icon_btn_close"
             android:layout_marginRight="10dp"/>
 
     </LinearLayout>
@@ -91,7 +91,7 @@
                 android:paddingLeft="12dp"
                 android:text="@string/edit_text_nationality"
                 android:textColor="@color/text_default_2"
-                android:textSize="12dp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -165,19 +165,46 @@
             android:textColor="@color/text_default_2"
             android:textSize="12sp" />
 
-        <EditText
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/login_main_edittext"
-            android:fontFamily="@font/notosans_regular_ttf"
-            android:hint="@string/edit_text_phone_hint"
-            android:paddingLeft="12dp"
-            android:singleLine="true"
-            android:textColor="@color/black"
-            android:textColorHint="@color/grey"
-            android:textSize="12sp" />
+            android:layout_height="51dp">
+
+
+            <EditText
+                android:id="@+id/et2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/login_main_edittext"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:hint="@string/edit_text_phone_hint"
+                android:paddingLeft="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:inputType="numberPassword"/>
+
+            <ImageView
+                android:id="@+id/icon_eye_open"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_eye_open"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="20dp"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/icon_eye_closed"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_eye_closed"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="20dp"
+                android:visibility="invisible"/>
+
+        </FrameLayout>
 
 
         <!--E-mail-->

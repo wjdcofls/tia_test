@@ -22,4 +22,5 @@
     <string name="edit_text_other">직접입력</string>
     <string name="edit_text_verification_request">인증요청</string>
     <string name="edit_text_next">다음</string>
+    <string name="friends">친구</string>
 </resources>
