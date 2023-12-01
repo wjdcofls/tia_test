@@ -33,6 +33,11 @@
             android:exported="true"
             android:launchMode="singleTop"/>
 
+        <activity
+            android:name=".nestedscrollview"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+
     </application>
 
 </manifest>

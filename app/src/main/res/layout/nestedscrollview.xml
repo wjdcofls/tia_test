@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/basic">
 
     <!--App Bar-->
@@ -9,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:background="@color/white">
+        android:background="@color/white"
+        tools:ignore="MissingConstraints">
 
         <View
             android:layout_width="30dp"
@@ -37,4 +40,74 @@
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/beige"
+        android:text="@string/nestedscrollview_text"
+        android:textSize="14sp"
+        android:textColor="@color/text_default_2"
+        android:fontFamily="@font/notosans_medium_ttf"
+        android:gravity="center"/>
+
+    <!--main-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical">
+
+        <!--new friends-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rectangle_round_corner"
+            android:fontFamily="@font/notosans_regular_ttf"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="@string/new_friends"
+            android:textColor="@color/text_default_2"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNewFriends"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <!--friends-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/rectangle_round_corner"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/friends"
+            android:textColor="@color/text_default_2"
+            android:textSize="14sp"
+            android:fontFamily="@font/notosans_regular_ttf"
+            android:paddingLeft="16dp"
+            android:gravity="center_vertical"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFriends"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

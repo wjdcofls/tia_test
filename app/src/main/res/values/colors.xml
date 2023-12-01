@@ -14,5 +14,8 @@
     <color name="splash">#DCDCDC</color>
     <color name="text_default_2">#7A7A7A</color>
     <color name="beige">#F8E9DE</color>
+    <color name="rectangle_round_corner">#F6F6F6</color>
+    <color name="username">#3E3E3E</color>
+    <color name="phone_number">#AFAFAF</color>
 
 </resources>
