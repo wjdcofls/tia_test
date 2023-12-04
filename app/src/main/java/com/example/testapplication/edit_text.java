@@ -1,6 +1,7 @@
 package com.example.testapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
@@ -109,6 +110,15 @@ public class edit_text extends AppCompatActivity {
                 iconEyeOpen.setVisibility(View.VISIBLE);
                 iconEyeClose.setVisibility(View.INVISIBLE);
                 et2.setSelection(et2.length());
+            }
+        });
+
+        Button btn_next = findViewById(R.id.btn_next);
+        btn_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), nestedscrollview.class);
+                startActivity(intent);
             }
         });
     }

@@ -53,7 +53,7 @@
     <!--main-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <!--new friends-->
@@ -75,14 +75,14 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewNewFriends"
             android:layout_width="match_parent"
-            android:layout_height="250dp">
+            android:layout_height="300dp">
         </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="10dp">
 
@@ -104,7 +104,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewFriends"
             android:layout_width="match_parent"
-            android:layout_height="250dp">
+            android:layout_height="300dp">
 
         </androidx.recyclerview.widget.RecyclerView>
 
