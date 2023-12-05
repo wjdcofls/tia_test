@@ -48,14 +48,16 @@ public class nestedscrollview extends AppCompatActivity {
         List<String> phoneNumbers = new ArrayList<>();
         Random random = new Random();
 
-        for (int i = 0; i < 30; i++) {
-            // 랜덤 전화번호 생성 (010으로 시작하는 11자리)
+        for (int i = 0; i < generateNames().size(); i++) {
+            // 랜덤 전화번호 생성 (010-4자리숫자-4자리숫자 형식)  random.nextInt(9000)은 0 이상 8999 이하의 난수를 생성
             phoneNumbers.add("010-" +
-                    String.format("%08d", random.nextInt(100000000)));
+                    String.format("%04d", random.nextInt(9000) + 1000) + "-" +
+                    String.format("%04d", random.nextInt(9000) + 1000));
         }
 
         return phoneNumbers;
     }
+
 
     // 랜덤한 이름 생성
     private List<String> generateNames() {
@@ -65,3 +67,5 @@ public class nestedscrollview extends AppCompatActivity {
                 "violin", "umbrella", "tomato", "sun"));
     }
 }
+
+// 리사이클러 뷰와 어댑터, 그리ㄱ 데이터를 생성하는 부분이 핵심

@@ -1,113 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/basic">
-
-    <!--App Bar-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        tools:ignore="MissingConstraints">
-
-        <View
-            android:layout_width="30dp"
-            android:layout_height="46dp"
-            android:layout_marginLeft="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/friends"
-            android:textColor="@color/main"
-            android:textSize="18dp"
-            android:fontFamily="@font/notosans_medium_ttf">
-        </TextView>
-
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="30dp"
-            android:layout_height="46dp"
-            android:background="@drawable/icon_btn_close"
-            android:layout_marginRight="10dp"/>
-
-    </LinearLayout>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/beige"
-        android:text="@string/nestedscrollview_text"
-        android:textSize="14sp"
-        android:textColor="@color/text_default_2"
-        android:fontFamily="@font/notosans_medium_ttf"
-        android:gravity="center"/>
-
-    <!--main-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <!--new friends-->
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/rectangle_round_corner"
-            android:fontFamily="@font/notosans_regular_ttf"
-            android:gravity="center_vertical"
-            android:paddingLeft="16dp"
-            android:text="@string/new_friends"
-            android:textColor="@color/text_default_2"
-            android:textSize="14sp" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewNewFriends"
-            android:layout_width="match_parent"
-            android:layout_height="300dp">
-        </androidx.recyclerview.widget.RecyclerView>
-
-    </LinearLayout>
+    android:layout_height="match_parent">
 
     <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="10dp">
+        android:background="@color/basic">
 
-        <!--friends-->
+        <!--App Bar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            tools:ignore="MissingConstraints">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/friends"
+                android:textColor="@color/main"
+                android:textSize="18dp"
+                android:fontFamily="@font/notosans_medium_ttf">
+            </TextView>
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="30dp"
+                android:layout_height="46dp"
+                android:background="@drawable/icon_btn_close"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="@drawable/rectangle_round_corner"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="@string/friends"
-            android:textColor="@color/text_default_2"
+            android:layout_height="50dp"
+            android:background="@color/beige"
+            android:text="@string/nestedscrollview_text"
             android:textSize="14sp"
-            android:fontFamily="@font/notosans_regular_ttf"
-            android:paddingLeft="16dp"
-            android:gravity="center_vertical"/>
+            android:textColor="@color/text_default_2"
+            android:fontFamily="@font/notosans_medium_ttf"
+            android:gravity="center"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewFriends"
+        <!--main-->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        </androidx.recyclerview.widget.RecyclerView>
+            <!--new friends-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle_round_corner"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="@string/new_friends"
+                android:textColor="@color/text_default_2"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewNewFriends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <!--friends-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangle_round_corner"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/friends"
+                android:textColor="@color/text_default_2"
+                android:textSize="14sp"
+                android:fontFamily="@font/notosans_regular_ttf"
+                android:paddingLeft="16dp"
+                android:gravity="center_vertical"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewFriends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>
