@@ -1,10 +1,16 @@
 package com.example.testapplication;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class nestedscrollview_adapter extends RecyclerView.Adapter<nestedscrollview_adapter.MyViewHolder> {
@@ -27,6 +33,7 @@ public class nestedscrollview_adapter extends RecyclerView.Adapter<nestedscrollv
             super(itemView);
             nameTextView = itemView.findViewById(R.id.username);
             phoneNumberTextView = itemView.findViewById(R.id.phone_number);
+
         }
     }
 
@@ -43,15 +50,90 @@ public class nestedscrollview_adapter extends RecyclerView.Adapter<nestedscrollv
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         // 데이터 바인딩 전에 유효성을 확인
-        if (position < names.size() && position < phoneNumbers.size()) {
+        if (names != null && phoneNumbers != null &&
+                position < names.size() && position < phoneNumbers.size()) {
             // 데이터 바인딩
             holder.nameTextView.setText(names.get(position));
             holder.phoneNumberTextView.setText(phoneNumbers.get(position));
+
+            // 아이템 클릭 이벤트 리스너 설정
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // 클릭한 아이템의 데이터를 다음 화면으로 전달
+                    User clickedUser = new User(names.get(position), phoneNumbers.get(position));
+                    Intent intent = new Intent(v.getContext(), user_profile.class);
+                    intent.putExtra("user_data", clickedUser);
+                    v.getContext().startActivity(intent);
+                }
+            });
         }
     }
+
 
     @Override
     public int getItemCount() {
         return names.size();
+    }
+
+
+
+    // User 클래스 정의
+    public static class User implements Parcelable {
+        private String name;
+        private String phoneNumber;
+
+        public User(String name, String phoneNumber) {
+            this.name = name;
+            this.phoneNumber = phoneNumber;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getPhoneNumber() {
+            return phoneNumber;
+        }
+
+        // Parcelable 구현
+        protected User(Parcel in) {
+            name = in.readString();
+            phoneNumber = in.readString();
+        }
+
+        public static final Creator<User> CREATOR = new Creator<User>() {
+            @Override
+            public User createFromParcel(Parcel in) {
+                return new User(in);
+            }
+
+            @Override
+            public User[] newArray(int size) {
+                return new User[size];
+            }
+        };
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeString(name);
+            dest.writeString(phoneNumber);
+        }
+    }
+
+    private List<User> users;
+
+    // User 객체 생성
+    private List<User> generateUsers(List<String> names, List<String> phoneNumbers) {
+        List<User> users = new ArrayList<>();
+        for (int i = 0; i < names.size(); i++) {
+            users.add(new User(names.get(i), phoneNumbers.get(i)));
+        }
+        return users;
     }
 }

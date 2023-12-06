@@ -15,6 +15,7 @@
             android:layout_height="120dp"
             android:src="@drawable/icon_profile"/>
         <TextView
+            android:id="@+id/detail_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/username"
@@ -24,6 +25,7 @@
             android:fontFamily="@font/notosans_regular_ttf"
             android:includeFontPadding="false"/>
         <TextView
+            android:id="@+id/detail_phone_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/phone_number"

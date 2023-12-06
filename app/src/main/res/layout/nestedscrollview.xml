@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
 
     <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
@@ -35,7 +36,7 @@
             </TextView>
 
             <Button
-                android:id="@+id/btn3"
+                android:id="@+id/btn_close"
                 android:layout_width="30dp"
                 android:layout_height="46dp"
                 android:background="@drawable/icon_btn_close"

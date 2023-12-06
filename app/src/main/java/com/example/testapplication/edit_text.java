@@ -52,6 +52,14 @@ public class edit_text extends AppCompatActivity {
         LinearLayout layout2 = findViewById(R.id.layout_focusout);
         EditText et_1 = findViewById(R.id.et1);
 
+        layout2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                hideKeyboard(v);
+                v.clearFocus();
+                return false;
+            }
+        });
 
         //Logcat
         et2.addTextChangedListener(new TextWatcher() {

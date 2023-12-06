@@ -1,6 +1,9 @@
 package com.example.testapplication;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,6 +44,14 @@ public class nestedscrollview extends AppCompatActivity {
         // RecyclerView에 어댑터 설정
         recyclerView1.setAdapter(adapter1);
         recyclerView2.setAdapter(adapter2);
+
+        Button btn_close = findViewById(R.id.btn_close);
+        btn_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     // 랜덤한 전화번호 생성
@@ -66,6 +77,7 @@ public class nestedscrollview extends AppCompatActivity {
                 "kite", "lemon", "nose", "mouse", "pig", "orange", "rabbit", "queen", "zebra", "yo-wassup",
                 "violin", "umbrella", "tomato", "sun"));
     }
+
 }
 
-// 리사이클러 뷰와 어댑터, 그리ㄱ 데이터를 생성하는 부분이 핵심
+// 리사이클러 뷰와 어댑터, 데이터를 생성하는 부분이 핵심
